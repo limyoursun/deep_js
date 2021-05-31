@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단축 평가(short-circuit evaluation)</title>
+</head>
+<body>
+  <script>
+  // 단축 평가 ☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°*:.☆:*.°★*
+  // || 혹은 && 연산자 표현식의 결과는 불리언 값이 아닐 수도 있다.
+  // 단축 평가는 표현식을 평가하는 도중에 평가 결과가 확정된 경우 나머지 평가 과정을 생략하는 것을 말한다.
+  { // 논리합 연산자
+    var a = 'cat' || 'Dog';
+    console.log(a);
+    var ab = false || 'Dog';
+    console.log(ab);
+    var abc = 'cat' || false;
+    console.log(abc);
+    // 논리합 연산자는 둘 중 하나가 참이라도 참이다.
+    // 
+
+     // 논리곱 연산자
+    var z = 'cat' && 'Dog';
+    console.log(z);
+    var zx = false && 'Dog';
+    console.log(zx);
+    var zxy = 'cat' && false;
+    console.log(zxy);
+  }
+  </script>
+</body>
+</html>

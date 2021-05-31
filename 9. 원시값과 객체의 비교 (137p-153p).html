@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원시값과 객체의 비교</title>
+</head>
+<body>
+  <script>
+  // 원시 타입 ☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°*:.☆:*.°★*
+  // 변경 불가능 / 변수에 할당 -> 실제의 값이 저장된다.
+  // 다른 변수에 할당 -> 원시값이 복사된다. (값에 의한 전달)
+  {
+    var score = 80;
+    var copy = score;
+    console.log(score);
+    console.log(copy);
+
+    var score = 100;
+    console.log(score); // 100
+    console.log(copy); // 80
+  }
+
+  // 객체 타입 ☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°*:.☆:*.°★*
+  // 변경 가능 / 변수에 할당 -> 참조의 값이 저장된다.
+  // 다른 변수에 할당 -> 참조값이 복사된다. (참조에 의한 전달)
+  {
+    var person = {
+      name:'sun'
+    };
+    person.name = 'sim'; // 프로퍼티 값 갱신
+    person.address = 'seoul'; // 프로퍼티 동적 생성
+    console.log(person);
+  }
+
+  // 얕은 복사(shollow copy)와 깊은 복사(deep copy)
+  // 솔직히 무슨 말인지 모르겠음 ㅎㅎ ☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°*:.☆:*.°★*☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°*:.☆:*.°★*☆*.｡.:*☆*★,°*:.☆:*.°★*｡.☆*.｡.:*☆*★,°
+  {// 얕은 복사
+    const o ={y :{x : 1}};
+    const c = o;
+    console.log(c === o);
+  }
+  {// 깊은 복사
+    const v = 1;
+    const c = v;
+    console.log(c === v);
+  }
+  </script>
+</body>
+</html>
